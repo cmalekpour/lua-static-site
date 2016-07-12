@@ -6,17 +6,17 @@ Simple static site generator written in Lua. The code is extremely short, and pr
 To install, you will need the markdown and luafilesystem packages from luarocks
 
 ```
-luarocks install markdwon
+luarocks install markdown
 luarocks install luafilesystem
 ```
 
 # Usage
 
-You can edit config settings in a small table at the top of ```static.lua```. Markdown posts should be placed in the input directory.
+You can edit config settings in a small table at the top of ```static.lua```. Markdown posts should be placed in the input directory, and the output will be put in the output directory.
 
 To run, simply execute static.lua.
 
-```$ lua static.lua```
+```lua static.lua```
 
 # Post format
 
@@ -40,5 +40,5 @@ The generator also supports a very simple templating language. Some strings in t
 There are also certain control blocks that the generator supports
 ```
 #{isnextpost} ... #{/isnextpost} => will only output the inner contents if there is a next post
-#{isprevpost} ... #{/isprevpost} => will only output the inner contents if there is a next post
+#{isprevpost} ... #{/isprevpost} => will only output the inner contents if there is a previous post
 ```
